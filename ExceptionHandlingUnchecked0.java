@@ -11,6 +11,9 @@ import java.util.Scanner;
  *
  * @author Aurel
  */
+/*  Program menggunakan tipe exception ArrayIndexOutOfBounds, dimana program berfungsi 
+untuk mengecek indeks dari suatu array yang tersedia apabila indeks yang ingin diakses
+ berada di luar batas array atau tidak*/
 public class ExceptionHandlingUnchecked0 {
      
     public static void cekIndex(int index)throws IllegalArgumentException {
