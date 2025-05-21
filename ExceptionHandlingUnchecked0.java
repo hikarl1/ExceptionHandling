@@ -1,0 +1,41 @@
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author Aurel
+ */
+public class ExceptionHandlingUnchecked0 {
+     
+    public static void cekIndex(int index)throws IllegalArgumentException {
+        if (index < 0){
+            throw new IllegalArgumentException("Index tidak bisa negatif");
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner array = new Scanner(System.in);
+        int[] a = {1, 2, 3};
+        
+        try {
+            System.out.print("Masukkan index array yang ingin diakses: ");
+            int index = array.nextInt();
+            cekIndex(index);
+            System.out.println("Nilai index ke- "+index+" adalah: "+a[index]);
+        } catch(InputMismatchException e) {
+            System.out.println("Terjadi exception: Input Mismatch! Masukkan angka bertipe integer");
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Terjadi exception: Array Index Out Of Bounds!");
+        } catch(IllegalArgumentException e){
+            System.out.println("Terjadi exception: " +e.getMessage());
+        } finally {
+            System.out.println("Blok finally selalu dijalankan");
+        } System.out.println("Program selesai.");
+    }
+}
