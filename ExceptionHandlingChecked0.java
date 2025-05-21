@@ -16,7 +16,9 @@ class IndexNegatifException extends Exception {
         super(pesan);
     }
 }
-
+/*  Program menggunakan tipe exception ArrayIndexOutOfBounds, dimana program berfungsi 
+untuk mengecek indeks dari suatu array yang tersedia apabila indeks yang ingin diakses
+ berada di luar batas array atau tidak*/
 public class ExceptionHandlingChecked0 {
 
     // 2. Method sekarang melempar checked exception
